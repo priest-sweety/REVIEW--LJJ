@@ -1,0 +1,15 @@
+project:
+  name: "REVIEW--LJJ"
+  description: "TODO_ONE_SENTENCE_QUESTION"
+  owner: "priest-sweety"
+  status: "NOT_STARTED"
+  repository_visibility_recommendation: "private_for_unpublished_research"
+  documentation_language: "English"
+research:
+  organism: "TODO"
+  assays: []
+  cohorts: []
+  primary_comparisons: []
+data:
+  authorization_status: "UNVERIFIED"
+  public_data_release_approved: false

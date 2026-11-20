@@ -1,0 +1,13 @@
+contract_version: "0.1.0"
+design_status: "DRAFT"
+scientific_question: "TODO"
+primary_hypothesis: "TODO"
+independent_biological_unit: "TODO"
+authorized_inputs: []
+primary_comparisons: []
+qc_and_exclusion_rules: []
+analysis_methods: []
+expected_deliverables: []
+stop_conditions: []
+reviewer: "TODO"
+human_approved: false
