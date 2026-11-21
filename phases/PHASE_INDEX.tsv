@@ -1,1 +1,5 @@
 phase_id	title	design_status	execution_status	scientific_status	latest_return	human_approved	last_reviewed
+phase-01	Literature curation and citation mapping across pancreatic disease continuum	DRAFT	NOT_EXECUTED	REVIEW_REQUIRED		false	
+phase-02	Cellular ecology and spatial niche synthesis across AP, CP, PanIN, and PDAC	DRAFT	NOT_EXECUTED	REVIEW_REQUIRED		false	
+phase-03	Immune reprogramming and multicellular crosstalk mechanisms	DRAFT	NOT_EXECUTED	REVIEW_REQUIRED		false	
+phase-04	Stage-specific therapeutic windows, figures, and manuscript integration	DRAFT	NOT_EXECUTED	REVIEW_REQUIRED		false	
