@@ -1,8 +1,8 @@
 # REVIEW--LJJ：《胰腺疾病中的炎症生态位》综述与研究仓库
 
-本仓库围绕综述课题 **《The Inflammatory Niche in Pancreatic Diseases》（胰腺疾病中的炎症生态位）** 构建，采用阶段化科研与文献证据管理架构，整合综述初稿、章节审校与续写提纲、23 篇核心参考文献结构化卡片、15 组公开单细胞/空间多组学数据集索引及四阶段推进计划。
+本仓库围绕综述课题 **《The Inflammatory Niche in Pancreatic Diseases》（胰腺疾病中的炎症生态位）** 构建，采用阶段化科研与文献证据管理架构，整合综述初稿、章节审校与续写提纲、23 篇核心参考文献结构化卡片、炎症生态位证据图谱与 30 篇已核验锚点文献表、15 组公开单细胞/空间多组学数据集索引及四阶段推进计划。
 
-[English README](README.md) · [综述初稿正文](manuscript/MANUSCRIPT_DRAFT.zh-CN.md) · [总结整理与续写路线图](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) · [23 篇文献索引](ref-article/README.md) · [公开数据集台账](manifests/DATASET_REGISTRY.tsv) · [科学设计](docs/SCIENTIFIC_DESIGN.md)
+[English README](README.md) · [综述初稿正文](manuscript/MANUSCRIPT_DRAFT.zh-CN.md) · [总结整理与续写路线图](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) · [23 篇文献索引](ref-article/README.md) · [炎症生态位证据图谱](ref-article/INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md) · [公开数据集台账](manifests/DATASET_REGISTRY.tsv) · [科学设计](docs/SCIENTIFIC_DESIGN.md)
 
 ## 当前进展总览（2026-11）
 
@@ -13,6 +13,7 @@
 | **2. Immune Reprogramming（免疫重编程）** | 已起笔首段（~110 字），已完成首段勘误与 2.1–2.4 详细写作提纲 | [manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) |
 | **3. Therapeutic Windows（治疗窗口）** | 待动笔，已完成 AP / CP / PanIN 拦截 / PDAC 四大窗口写作提纲与文献锚点 | [manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) |
 | **参考文献库（23 篇，2021–2026）** | 全部核验 DOI、期刊、公开数据集编号与章节映射（原始 PDF 本地留存不入 Git） | [ref-article/README.md](ref-article/README.md) · [LITERATURE_CATALOG.tsv](ref-article/LITERATURE_CATALOG.tsv) |
+| **炎症生态位证据图谱 + 锚点文献表（30 篇）** | 10 类生态位（`N1`–`N10`）× 疾病阶段 × 机制 × 通路 × 标志物 × 证据等级（`E1`–`E4`）；30 篇锚点文献的第一作者/题目/DOI/PMID 已对照 PubMed 与 Crossref 核验（2026-11-23），其中 23 篇尚无阅读卡片；科学表述待作者审阅（`REVIEW_REQUIRED`） | [证据图谱](ref-article/INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md) · [VERIFIED_KEY_PAPERS.tsv](ref-article/VERIFIED_KEY_PAPERS.tsv) |
 | **公开多组学数据集台账（15 项）** | 已从原始研究提取 GEO/EGA/GSA/dbGaP/Zenodo 编号（状态均为 `NOT_ACQUIRED`） | [manifests/DATASET_REGISTRY.tsv](manifests/DATASET_REGISTRY.tsv) |
 | **分阶段计划（`phase-01`–`phase-04`）** | 仅完成 `01_design` 设计契约（`DRAFT` / `NOT_EXECUTED`） | [phases/PHASE_INDEX.tsv](phases/PHASE_INDEX.tsv) |
 

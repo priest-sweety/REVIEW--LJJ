@@ -7,6 +7,8 @@ Per [DATA_POLICY.md](../docs/DATA_POLICY.md), **copyrighted publisher PDFs are n
 - Machine-readable master table: [LITERATURE_CATALOG.tsv](LITERATURE_CATALOG.tsv)
 - Associated public multi-omics accessions ledger: [manifests/DATASET_REGISTRY.tsv](../manifests/DATASET_REGISTRY.tsv)
 - Paragraph-level citation backfill map for the manuscript: [manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md](../manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md)
+- Evidence atlas (Chinese): [INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md](INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md)
+- Verified anchor-paper table for the atlas: [VERIFIED_KEY_PAPERS.tsv](VERIFIED_KEY_PAPERS.tsv)
 
 ## Thematic index (23 curated references)
 
@@ -57,3 +59,20 @@ Per [DATA_POLICY.md](../docs/DATA_POLICY.md), **copyrighted publisher PDFs are n
 | ID | Citation | Type | Core focus | Note |
 | --- | --- | --- | --- | --- |
 | `REF23` | Peng et al. (Wang & Kadara), *Cancer Cell* 2026 | Research | Spatial co-evolution of epithelial progenitors & `IL1Bhigh` macrophage niches + early interception | [Card](REF23_peng-2026-ccell-luad-precursor-niche/README.md) |
+
+## Evidence atlas and anchor papers
+
+[`INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md`](INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md) is a targeted, non-PRISMA evidence synthesis that maps ten inflammatory niche types (`N1`–`N10`) onto disease stage, defining and maintaining mechanisms, key pathways, immune-reprogramming functions, candidate markers, and evidence level (`E1`–`E4`) across AP, CP, PanIN, and PDAC (evidence cut-off 2026-11-23). It organizes evidence for drafting the review; it is **not** a systematic review, and its scientific statements remain `REVIEW_REQUIRED`.
+
+Its machine-readable companion, [`VERIFIED_KEY_PAPERS.tsv`](VERIFIED_KEY_PAPERS.tsv), lists the 30 key anchor papers collected for the atlas (`K01`–`K30`, 2011–2026). First author, published title, DOI, and PMID/PMCID were cross-checked record by record against PubMed and Crossref on 2026-11-23. Seven anchor papers are shared with the 23 reading cards above and are linked through `catalog_ref_id`; the other 23 are anchor-only records (`NOT_IN_CATALOG`) **without a reading card, dataset-accession indexing, or local archive fingerprint**. Bibliographic verification is not a content review.
+
+| Column | Meaning |
+| --- | --- |
+| `ref_key` | Anchor-paper key (`K01`–`K30`) |
+| `stage`, `niche_id` | Disease stage(s) and atlas niche type(s) the evidence is used for |
+| `citation` | `First author et al. Published title` |
+| `year`, `journal`, `doi` | Year, journal, and DOI |
+| `pmid`, `pmcid` | PubMed ID and PubMed Central ID; `NOT_IN_PMC` when PubMed listed no PMC record at verification time |
+| `model_or_cohort`, `main_finding`, `evidence_class`, `limitations` | Original synthesis notes, not publisher abstracts |
+| `catalog_ref_id` | Matching `REFxx` card in [LITERATURE_CATALOG.tsv](LITERATURE_CATALOG.tsv) (matched by DOI), or `NOT_IN_CATALOG` |
+| `bibliography_verified` | Sources and date of the bibliographic cross-check (`pubmed_crossref_2026-11-23`) |
