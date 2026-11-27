@@ -1,84 +1,71 @@
-# REVIEW--LJJ
+# REVIEW--LJJ: The Inflammatory Niche in Pancreatic Diseases
 
-**A clean, phase-oriented bioinformatics research workspace for humans and AI coding agents.**
+**Stage-resolved literature synthesis, spatial-multiomics evidence mapping, and phase-oriented research workspace for _The Inflammatory Niche in Pancreatic Diseases_（胰腺疾病中的炎症生态位）.**
 
-[中文指南](README.zh-CN.md) · [Get started](docs/GETTING_STARTED.md) · [Scientific rules](AGENTS.md) · [Phase lifecycle](phases/PHASE_LIFECYCLE.md) · [Data safety](docs/DATA_POLICY.md)
+[中文主页](README.zh-CN.md) · [综述初稿](manuscript/MANUSCRIPT_DRAFT.zh-CN.md) · [总结与续写路线图](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) · [23 篇文献库索引](ref-article/README.md) · [证据图谱](ref-article/INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md) · [公开数据集台账](manifests/DATASET_REGISTRY.tsv) · [科学设计](docs/SCIENTIFIC_DESIGN.md)
 
-> **Status: INITIALIZED, NOT STARTED.** This repository is set up with a phase-oriented management scaffold and contains **no study data, real experiment, analyses, results, or completed research rounds**. Fields marked `TODO` are unanswered prompts awaiting truthful entries from the project owner.
+> **Status: DRAFTING IN PROGRESS · COMPUTATIONAL RE-ANALYSIS `NOT_EXECUTED`.**
+> `Introduction` and `1. Cellular Ecology` (spanning AP, CP, PanIN, and PDAC) are drafted in [manuscript/MANUSCRIPT_DRAFT.zh-CN.md](manuscript/MANUSCRIPT_DRAFT.zh-CN.md); `2. Immune Reprogramming` has an opening stub; `3. Therapeutic Windows` is outlined and ready for drafting. All 23 curated reference papers (2021–2026) and 15 associated multi-omics dataset series are indexed with DOIs and accessions. Copyrighted publisher PDFs and raw sequencing objects are kept strictly outside Git per [docs/DATA_POLICY.md](docs/DATA_POLICY.md).
 
-## Why this structure?
+## Scientific overview
 
-Bioinformatics projects need more than code: scientific decisions, input provenance, analysis contracts, execution logs, returned evidence, limitations, and independent review must remain distinguishable. This repository adopts a lightweight, reusable framework without prescribing a particular organism, disease, assay, or method.
+Pancreatic inflammation is not an isolated cytokine cascade, but a dynamic, spatially organized **inflammatory niche** co-constructed by plastic acinar/ductal epithelium, pancreatic stellate cells (PSCs) and cancer-associated fibroblasts (CAFs), innate myeloid populations (neutrophils, resident and monocyte-derived macrophages, dendritic cells), adaptive lymphocytes (Th1/Th2/Th17, FOXP3+ Tregs, CD8+ T subsets, B cells/TLS), vascular endothelium, and Schwann-associated perineural structures.
 
-## At a glance
+This review synthesizes single-cell, single-nucleus, spatial transcriptomic, 3D histological, organoid, and translational clinical evidence across **four disease stages** and **three thematic pillars**:
 
-| Area | What belongs here | Entry point |
-| --- | --- | --- |
-| Research scope | Questions, hypotheses, design decisions | [Scientific design](docs/SCIENTIFIC_DESIGN.md) |
-| Data provenance | Data registration; authorized storage *references* | [Manifest rules](manifests/README.md) |
-| Quality and claims | Eligibility checks and interpretation boundaries | [Quality gates](docs/QUALITY_GATES.md) |
-| Planned work | Design contracts distinct from execution | [Phase organization](phases/README.md) |
-| Returned evidence | Immutable run records and audit trails | [Lifecycle](phases/PHASE_LIFECYCLE.md) |
-| Agent collaboration | Rules for Codex, GPT and other tools | [AGENTS.md](AGENTS.md) |
-| Repository maintenance | Reviews, change control and release hygiene | [Contributing](CONTRIBUTING.md) |
+1. **Cellular Ecology** — Stage-resolved cellular composition, acinar plasticity (`Acinar-s/i/REG` → reversible ADM → *KRAS*-locked mucinous `MP11` & tuft metaplasia → `FOSL1`-driven `MP10` cutaneous-like re-epithelialization), CAF heterogeneity (`IL-33+` reparative fibroblasts → fibrogenic aPSCs → `C3+` iCAFs → `CTHRC1high` myCAFs & `PLXDC1+` TPSCs), and micron-scale immune/perineural organization.
+2. **Immune Reprogramming** — Bidirectional intercellular circuits (`SPHK1/S1P–S1PR2` acinar-to-PSC autophagy activation, `CCR6–CCL20` hereditary CP T-myeloid crosstalk, Treg restraint of type-2 fibrosis vs focal 3D precancerous Treg/TAM hotspots, `CTHRC1high` myCAF–EGFR–`FOSL1` invasion loop, and `TGFBI+` Schwann–`NLRP3+` TAM perineural niches).
+3. **Therapeutic Windows** — Stage-matched interventions: promoting resolution in AP, rescuing ductal `CFTR` function and halting fibrogenesis in CP, intercepting high-risk precancerous PanIN niches, and reprogramming cold desmoplastic TME in combination with KRAS inhibitors, neoantigen vaccines, and immunotherapy in PDAC.
 
 ## Project metadata
 
 | Field | Value |
 | --- | --- |
-| Project name | REVIEW--LJJ |
-| Scientific question | `TODO: RESEARCH_QUESTION` |
-| Assay(s) / organism | `TODO: ASSAYS_AND_MODEL` |
+| Project name | `REVIEW--LJJ` — *The Inflammatory Niche in Pancreatic Diseases* |
+| Disease continuum | Homeostasis → Acute Pancreatitis (AP) → Chronic Pancreatitis (CP) → PanIN → PDAC |
+| Modalities synthesized | scRNA-seq (incl. FixNCut), snRNA-seq, Spatial Transcriptomics (GeoMx, Visium, ISS), ATAC-seq, 3D CODA Histology, PDOs, Radiomics |
 | Project owner | [priest-sweety](https://github.com/priest-sweety) |
-| Data access level | `TODO: PRIVATE / CONTROLLED / PUBLIC` |
-| Current phase | **Not started** |
-| Latest validated result | **None** |
+| Curated literature | **23** peer-reviewed articles (2021–2026) in [ref-article/](ref-article/README.md) ([TSV](ref-article/LITERATURE_CATALOG.tsv)) |
+| Evidence atlas & anchor papers | Niche atlas `N1`–`N10` (zh-CN) + **30** PubMed/Crossref-verified anchor papers (`K01`–`K30`, 2011–2026; 7 shared with the curated set) in [ref-article/](ref-article/README.md) |
+| Indexed public datasets | **15** multi-omics accession entries (`NOT_ACQUIRED`) in [manifests/DATASET_REGISTRY.tsv](manifests/DATASET_REGISTRY.tsv) |
+| Active phases | `phase-01` to `phase-04` (`DRAFT` / `NOT_EXECUTED` / `REVIEW_REQUIRED`) in [phases/PHASE_INDEX.tsv](phases/PHASE_INDEX.tsv) |
+| Validated computational runs | **None** (`manifests/RUN_INDEX.tsv` empty) |
 
-## Directory structure
+## Quick navigation
+
+| Area | Contents | Entry point |
+| --- | --- | --- |
+| **Review manuscript** | Current Chinese review draft (`~7,600` chars) imported cleanly from Word | [manuscript/MANUSCRIPT_DRAFT.zh-CN.md](manuscript/MANUSCRIPT_DRAFT.zh-CN.md) |
+| **Synthesis & roadmap** | Progress audit, AP→PDAC comparison matrix, citation backfill map, 7 editorial errata, Sections 2–3 outline & Figure blueprints | [manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md](manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md) |
+| **Literature library** | 23 structured reading cards (`REF01`–`REF23`) + DOI/accession master table | [ref-article/README.md](ref-article/README.md) |
+| **Evidence atlas** | Niche types `N1`–`N10` × stage × mechanism × pathway × markers × evidence level, with a 30-paper verified anchor table | [ref-article/INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md](ref-article/INFLAMMATORY_NICHE_EVIDENCE_ATLAS.zh-CN.md) · [ref-article/VERIFIED_KEY_PAPERS.tsv](ref-article/VERIFIED_KEY_PAPERS.tsv) |
+| **Scientific design** | Scope, cross-stage contrasts, competing evidence & acceptance criteria | [docs/SCIENTIFIC_DESIGN.md](docs/SCIENTIFIC_DESIGN.md) |
+| **Data provenance** | Public GEO/EGA/GSA/dbGaP/Zenodo accessions cited in curated papers (`NOT_ACQUIRED`) | [manifests/DATASET_REGISTRY.tsv](manifests/DATASET_REGISTRY.tsv) |
+| **Planned phases** | Four structured review & verification phases ([phase-01](phases/phase-01/README.md)–[phase-04](phases/phase-04/README.md)) | [phases/PHASE_INDEX.tsv](phases/PHASE_INDEX.tsv) |
+| **Governance & safety** | Agent rules, quality gates, data policy, and public release checklist | [AGENTS.md](AGENTS.md) · [docs/QUALITY_GATES.md](docs/QUALITY_GATES.md) · [docs/DATA_POLICY.md](docs/DATA_POLICY.md) |
+
+## Repository structure
 
 ```text
 .
-├── .github/                  # Review and CI automation
-├── config/                   # Project-level configuration
-├── docs/                     # Scientific design, policies and guides
-├── manifests/                # Source/sample/environment registries (headers only)
-├── ref-article/              # Reference reading and methods notes
-├── scripts/                  # Local utilities and structural checks
-├── tests/                    # Repository scaffold test suite
-├── phases/
-│   ├── PHASE_INDEX.tsv       # Phase overview, empty until real work begins
-│   ├── PHASE_LIFECYCLE.md    # Design/execution/review state machine
-│   └── _template/            # Copy to phases/phase-01, phase-02, ...
-│       ├── 01_design/        # Pre-run scientific contract
-│       ├── 02_campaign/      # Agent execution + return instructions
-│       └── 03_returns/       # Read-only outputs *after* actual execution
-├── AGENTS.md                 # General agent rules
-├── CLAUDE.md                 # Pointers for compatible agent clients
-└── README.zh-CN.md           # Student-friendly quick start
+├── .github/                  # CI validation workflow and PR/Issue templates
+├── config/                   # Project metadata (config/project.yaml)
+├── docs/                     # Scientific design, quality gates, data & release policies
+├── manifests/                # Public dataset registry (NOT_ACQUIRED) & run ledgers
+├── manuscript/               # Review draft (Markdown) + synthesis, citation map & outline
+├── ref-article/              # LITERATURE_CATALOG.tsv, VERIFIED_KEY_PAPERS.tsv, evidence atlas, 23 reference notes (REF01-REF23)
+├── phases/                   # Phase lifecycle + phase-01..phase-04 design contracts
+├── scripts/                  # init_phase.py and validate_repo.py hygiene checks
+└── tests/                    # Dependency-free repository validation unit tests
 ```
 
-## A typical research round
-
-1. **Define** — specify the scientific question, contrasts, inputs, exclusion criteria, analysis plan, and acceptance gates in `01_design/`.
-2. **Freeze** — review and version the design; issue an agent-specific instruction from `02_campaign/`.
-3. **Execute** — perform real analyses in an authorized environment; log commands, versions, parameters, inputs and failures.
-4. **Return** — archive allowable summaries and metadata as a unique `03_returns/Rxxx/` package, linking external large or sensitive artifacts by authorized reference.
-5. **Review** — audit file integrity and scientific interpretation *separately*. Only an authorized reviewer can approve biological claims.
-6. **Update** — adjust the phase index and reporting status only after a real status change; preserve prior returns.
-
-**A design document is not a completed experiment. A successful CI check is not scientific validation.**
-
-## Quick start
+## Validation commands
 
 ```bash
-# Start a new research phase (design-only; never synthetic results).
-python scripts/init_phase.py --id phase-01 --title "Initial data assessment"
-python scripts/validate_repo.py
-python -m unittest discover -s tests -v
+python3 scripts/validate_repo.py
+python3 -m unittest discover -s tests -v
 ```
-
-`init_phase.py` creates a *design-only* phase. Edit the generated contracts and register your authorized inputs before executing analysis.
 
 ## Provenance and license
 
-The management scaffold of this repository is adopted from [LCGaoZzz/Bioinformatics-Research-Template](https://github.com/LCGaoZzz/Bioinformatics-Research-Template) and is distributed under the [MIT License](LICENSE). Rights in third-party datasets, methods, software, and figures are **not** granted by this license. Before making this repository public with real study content, complete the [public release checklist](docs/PUBLIC_RELEASE_CHECKLIST.md).
+The repository management scaffold is adapted from [LCGaoZzz/Bioinformatics-Research-Template](https://github.com/LCGaoZzz/Bioinformatics-Research-Template) under the [MIT License](LICENSE). Rights in third-party publications, datasets, methods, and figures remain with their respective copyright holders. Before releasing unpublished manuscript revisions publicly, review [docs/PUBLIC_RELEASE_CHECKLIST.md](docs/PUBLIC_RELEASE_CHECKLIST.md).

@@ -1,0 +1,30 @@
+contract_version: "0.1.0"
+design_status: "DRAFT"
+scientific_question: "Are all empirical claims in the review draft traceable to verified peer-reviewed primary studies or authoritative reviews with explicit species, assay, and cohort context?"
+primary_hypothesis: "Systematic mapping of the 23 curated references (2021-2026) resolves citation gaps in Introduction and Section 1 while identifying public multi-omics datasets for potential downstream figure verification."
+independent_biological_unit: "Individual peer-reviewed study / independent donor or animal cohort reported per reference"
+authorized_inputs:
+  - "ref-article/LITERATURE_CATALOG.tsv"
+  - "manifests/DATASET_REGISTRY.tsv"
+  - "manuscript/MANUSCRIPT_DRAFT.zh-CN.md"
+primary_comparisons:
+  - "Primary experimental multi-omics studies (n=16) vs clinical/mechanistic reviews (n=7)"
+  - "Human donor/surgical cohorts vs murine genetic/injury models"
+qc_and_exclusion_rules:
+  - "Exclude unverified citations or non-peer-reviewed claims"
+  - "Retain copyrighted publisher PDFs outside Git; record DOI and sha256_16 only"
+  - "Separate literature indexing from computational re-execution (NOT_EXECUTED)"
+analysis_methods:
+  - "Bibliographic and DOI verification from primary PDF headers"
+  - "Public accession extraction (GEO/EGA/GSA/dbGaP/Zenodo)"
+  - "Paragraph-level claim-to-reference matching"
+expected_deliverables:
+  - "ref-article/LITERATURE_CATALOG.tsv"
+  - "ref-article/REF01..REF23 structured cards"
+  - "manifests/DATASET_REGISTRY.tsv"
+  - "Citation backfill table in manuscript/REVIEW_SYNTHESIS_AND_ROADMAP.zh-CN.md"
+stop_conditions:
+  - "All 23 curated PDFs verified with exact DOI and mapped to review sections"
+  - "Zero broken links or >2 MiB files in validate_repo.py"
+reviewer: "priest-sweety"
+human_approved: false

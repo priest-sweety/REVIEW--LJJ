@@ -1,15 +1,33 @@
 project:
   name: "REVIEW--LJJ"
-  description: "TODO_ONE_SENTENCE_QUESTION"
+  title: "The Inflammatory Niche in Pancreatic Diseases"
+  title_zh: "胰腺疾病中的炎症生态位"
+  description: "Stage-resolved synthesis and spatial-multiomics evidence mapping of the pancreatic inflammatory niche across acute pancreatitis (AP), chronic pancreatitis (CP), pancreatic intraepithelial neoplasia (PanIN), and pancreatic ductal adenocarcinoma (PDAC)."
   owner: "priest-sweety"
-  status: "NOT_STARTED"
+  status: "DRAFTING_IN_PROGRESS"
   repository_visibility_recommendation: "private_for_unpublished_research"
-  documentation_language: "English"
+  documentation_language: "English (shared governance) / Chinese-English bilingual (review manuscript and synthesis)"
 research:
-  organism: "TODO"
-  assays: []
-  cohorts: []
-  primary_comparisons: []
+  organism: "Homo sapiens and Mus musculus (comparative disease models)"
+  assays:
+    - "Single-cell RNA-seq (including FixNCut reversible-fixation scRNA-seq)"
+    - "Single-nucleus RNA-seq (snRNA-seq)"
+    - "Spatial transcriptomics (GeoMx WTA, 10x Visium, in situ RNA sequencing)"
+    - "Bulk RNA-seq and ATAC-seq"
+    - "Three-dimensional quantitative histology (CODA) and multiplex IHC"
+    - "Patient-derived organoids (PDOs)"
+    - "Quantitative radiomics"
+  cohorts:
+    - "Healthy adult and neonatal human donor pancreata"
+    - "Acute pancreatitis (AP: early injury 0-24h, late metaplastic 72h-5d, recovery ~14d)"
+    - "Chronic pancreatitis (CP: hereditary vs idiopathic etiologies)"
+    - "Pancreatic intraepithelial neoplasia (PanIN: low-grade vs high-grade dysplasia)"
+    - "Pancreatic ductal adenocarcinoma (PDAC: classical, basal-like, perineural invasion)"
+  primary_comparisons:
+    - "Reversible injury-repair ADM in AP vs persistent fibroinflammatory ADM in CP"
+    - "Hereditary CP (CCR6-CCL20 CD4+ T cell axis) vs idiopathic CP immune microenvironments"
+    - "KRAS-locked non-invasive PanIN (MP11 + C3+ iCAF + focal immune hotspots) vs invasive PDAC (FOSL1-driven MP10 + CTHRC1high myCAF)"
+    - "Immune-excluded stromal regions vs tertiary lymphoid structures (TLS) and TGFBI+ Schwann-associated perineural niches in PDAC"
 data:
-  authorization_status: "UNVERIFIED"
+  authorization_status: "PUBLIC_LITERATURE_INDEXED_ONLY"
   public_data_release_approved: false
